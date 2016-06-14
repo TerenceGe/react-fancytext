@@ -1,0 +1,16 @@
+{
+  "name": "react-fancytext",
+  "version": "1.0.0",
+  "description": "text with fancy animation for react.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "text",
+    "animation"
+  ],
+  "author": "Terence Ge (https://github.com/TerenceGe)",
+  "license": "MIT"
+}
