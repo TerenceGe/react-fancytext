@@ -4,40 +4,26 @@ var precss = require('precss')
 var autoprefixer = require('autoprefixer')
 
 module.exports = {
+  context: path.join(__dirname, './'),
   entry: {
-    './dist/react-fancytext': './src/index.js',
-    './demo/react-fancytext': './src/index.js',
+    jsx: './index.js',
+    html: './index.html'
   },
   output: {
-    path: './',
-    filename: '[name].js',
-    library: 'ReactFancyText',
-    libraryTarget: 'umd'
+    path: path.join(__dirname, './'),
+    filename: 'bundle.js',
   },
-  externals: [
-    {
-      'react': {
-        root: 'React',
-        commonjs2: 'react',
-        commonjs: 'react',
-        amd: 'react'
-      }
-    },
-    {
-      'react-dom': {
-        root: 'ReactDOM',
-        commonjs2: 'react-dom',
-        commonjs: 'react-dom',
-        amd: 'react-dom'
-      }
-    }
-  ],
   module: {
     loaders: [
       {
+        test: /\.html$/,
+        loader: 'file?name=[name].[ext]'
+      },
+      {
         test: /\.css$/,
         include: [
-          path.resolve(__dirname, './src')
+          path.resolve(__dirname, './'),
+          path.resolve(__dirname, '../src')
         ],
         loaders: [
           'style-loader',
@@ -48,16 +34,16 @@ module.exports = {
       {
         test: /\.css$/,
         exclude: [
-          path.resolve(__dirname, './src')
+          path.resolve(__dirname, './'),
+          path.resolve(__dirname, '../src')
         ],
         loader: 'style!css'
       },
       {
         test: /\.(js|jsx)$/,
-        exclude: [
-          path.resolve(__dirname, 'node_modules')
-        ],
+        exclude: /node_modules/,
         loaders: [
+          'react-hot',
           'babel-loader'
         ]
       },
@@ -75,5 +61,9 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env': { NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development') }
     })
-  ]
+  ],
+  devServer: {
+    contentBase: './',
+    hot: true
+  }
 }

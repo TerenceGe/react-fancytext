@@ -1,5 +1,5 @@
 {
-  "name": "react-fancytext",
+  "name": "react-fancytext-demo",
   "version": "1.0.0",
   "description": "Text with fancy animation for react.js",
   "repository": {
@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "NODE_ENV=production webpack --progress --colors"
+    "demo": "webpack-dev-server -d --history-api-fallback --hot --inline --progress --colors --port 3000"
   },
   "keywords": [
     "react",

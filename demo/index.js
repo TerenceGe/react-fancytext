@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom'
 import React from 'react'
 import style from './style.css'
-import FancyText from '../src/index.js'
+import FancyText from './react-fancytext.js'
 
 class Container extends React.Component {
   constructor(props, context) {
@@ -10,7 +10,7 @@ class Container extends React.Component {
 
   render() {
     return (
-      <div className={style.container}><FancyText text='Hello, world.'></FancyText></div>
+      <div className={style.container}><FancyText>Hello, world.</FancyText></div>
     )
   }
 }
