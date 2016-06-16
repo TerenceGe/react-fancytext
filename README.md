@@ -2,12 +2,6 @@
 
 ![demo](images/demo.jpg)
 
-## Build Source
-
-```
-$ npm run build
-```
-
 ## Run Demo
 
 ```
