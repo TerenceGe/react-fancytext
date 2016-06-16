@@ -1,6 +1,6 @@
 # react-fancytext
 
-![demo](images/demo.png)
+![demo](images/demo.jpg)
 
 ## Build Source
 

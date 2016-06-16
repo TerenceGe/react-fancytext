@@ -1,8 +1,19 @@
+@font-face {
+  font-family: "NotoSans";
+  src: url('./fonts/NotoSansCJKsc-Light.eot');
+  src: url('./fonts/NotoSansCJKsc-Light.eot?#iefix') format('eot'),
+  url('./fonts/NotoSansCJKsc-Light.woff') format('woff'),
+  url('./fonts/NotoSansCJKsc-Light.ttf') format('truetype'),
+  url('./fonts/NotoSansCJKsc-Light.svg#symbols') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :global {
   html, body, #root {
-    font-family: Avenir Next, Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 40px;
-    background-color: black;
+    font-family: 'NotoSans', Avenir Next, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 50px;
+    background-image: url('http://139.196.58.233/lake/home/wp-content/uploads/2016/06/647015955.jpg');
     color: white;
     height: 100vh;
     width: 100vw;
@@ -16,4 +27,5 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  letter-spacing: 4px;
 }
