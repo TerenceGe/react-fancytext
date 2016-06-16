@@ -1,6 +1,6 @@
 # react-fancytext
 
-![demo](images/demo.jpg)
+![demo](images/demo.gif)
 
 ## Run Demo
 
