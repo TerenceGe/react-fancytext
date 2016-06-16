@@ -14,6 +14,7 @@
     font-family: 'NotoSans', Avenir Next, Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 50px;
     background-image: url('http://139.196.58.233/lake/home/wp-content/uploads/2016/06/647015955.jpg');
+    background-size: cover;
     color: white;
     height: 100vh;
     width: 100vw;
