@@ -16,16 +16,17 @@ import React from 'react'
 import FancyText from 'react-fancytext'
 
 class Example extends React.Component {
-  constructor(props, context) {
-    super(props, context)
-  }
-
   render() {
     return (
       <div><FancyText>不一样的视角看世界！</FancyText></div>
     )
   }
 }
+```
+
+### Customization
+```javascript
+<FancyText textColor='#F9F6F5' shadowColor='fff'>不一样的视角看世界！</FancyText>
 ```
 
 ## Run Demo

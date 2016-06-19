@@ -105,4 +105,10 @@ var FancyText = function (_React$Component) {
   return FancyText;
 }(_react2.default.Component);
 
+FancyText.propTypes = {
+  textColor: _react2.default.PropTypes.string,
+  shadowColor: _react2.default.PropTypes.string,
+  children: _react2.default.PropTypes.string
+};
+
 exports.default = FancyText;
