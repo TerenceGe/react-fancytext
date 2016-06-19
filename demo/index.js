@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom'
 import React from 'react'
 import style from './style.css'
-import FancyText from './react-fancytext.js'
+import FancyText from 'react-fancytext'
 
 class Container extends React.Component {
   constructor(props, context) {
