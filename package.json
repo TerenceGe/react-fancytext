@@ -1,13 +1,13 @@
 {
   "name": "react-fancytext",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Text with fancy animation for react.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/TerenceGe/react-fancytext"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha -r test/helpers/browser.js -r test/helpers/mocha-compilers.js test/**/*-test.js",
     "build": "babel src/index.js -o dist/react-fancytext.js"
   },
   "keywords": [
@@ -26,7 +26,12 @@
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-react": "^6.5.0",
     "babel-preset-stage-0": "^6.5.0",
+    "babel-register": "^6.9.0",
     "babel-runtime": "^6.9.2",
+    "chai": "^3.5.0",
+    "chai-enzyme": "^0.5.0",
+    "enzyme": "^2.3.0",
+    "mocha": "^2.5.3",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
     "react-hot-loader": "^1.3.0"
