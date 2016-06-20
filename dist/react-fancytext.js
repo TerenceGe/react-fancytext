@@ -108,7 +108,8 @@ var FancyText = function (_React$Component) {
 FancyText.propTypes = {
   textColor: _react2.default.PropTypes.string,
   shadowColor: _react2.default.PropTypes.string,
-  children: _react2.default.PropTypes.string
+  children: _react2.default.PropTypes.string,
+  tagName: _react2.default.PropTypes.string
 };
 
 exports.default = FancyText;

@@ -66,7 +66,8 @@ class FancyText extends React.Component {
 FancyText.propTypes = {
   textColor: React.PropTypes.string,
   shadowColor: React.PropTypes.string,
-  children: React.PropTypes.string
+  children: React.PropTypes.string,
+  tagName: React.PropTypes.string
 }
 
 export default FancyText
