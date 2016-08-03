@@ -57,9 +57,9 @@ class FancyText extends React.Component {
   }
 
   render() {
-    let { tagName, children } = this.props
+    let { tagName, children, ...props } = this.props
     tagName = tagName || 'div'
-    return React.createElement(tagName, this.props, this.renderLetters(children))
+    return React.createElement(tagName, {...props}, this.renderLetters(children))
   }
 }
 
