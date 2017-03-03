@@ -20,17 +20,28 @@ class FancyText extends React.Component {
   }
 
   renderLetters(text) {
-    let keyframes =
-    `@keyframes fading {
-      from {
-        color: rgba(255,255,255,0);
-        text-shadow: 0 0 .5em ${this.state.shadowColor};
+    let keyframes = `
+      @-webkit-keyframes fading {
+        from {
+          color: rgba(255,255,255,0);
+          text-shadow: 0 0 .5em ${this.state.shadowColor};
+        }
+        to {
+          color: ${this.state.textColor};
+          text-shadow: 0 0 .1em ${this.state.shadowColor};
+        }
       }
-      to {
-        color: ${this.state.textColor};
-        text-shadow: 0 0 .1em ${this.state.shadowColor};
+      @keyframes fading {
+        from {
+          color: rgba(255,255,255,0);
+          text-shadow: 0 0 .5em ${this.state.shadowColor};
+        }
+        to {
+          color: ${this.state.textColor};
+          text-shadow: 0 0 .1em ${this.state.shadowColor};
+        }
       }
-    }`
+    `
     this.state.styleSheet.insertRule(keyframes, this.state.styleSheet.cssRules.length)
 
     let letters = []
@@ -38,18 +49,8 @@ class FancyText extends React.Component {
       let time = this.getRandomInt(30,60) / 10
       let timingFunction = this.state.timingFunctions[this.getRandomInt(0,5)]
       let animationStyle = {
-        WebkitAnimationName: 'fading',
-        animationName: 'fading',
-        WebkitAnimationDuration: time + 's',
-        animationDuration: time + 's',
-        WebkitAnimationDelay: '0s',
-        animationDelay: '0s',
-        WebkitAnimationIterationCount: 'infinite',
-        animationIterationCount: 'infinite',
-        WebkitAnimationDirection: 'alternate',
-        animationDirection: 'alternate',
-        WebkitAnimationTimingFunction: timingFunction,
-        animationTimingFunction: timingFunction,
+        animation: `fading ${time}s ${timingFunction} 0s infinite alternate`,
+        WebkitAnimation: `fading ${time}s ${timingFunction} 0s infinite alternate`
       }
       letters.push(<span key={i} className={'char' + i} style={animationStyle}>{text[i]}</span>)
     }
